@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
 
     return Scaffold(
       body: Container(
@@ -126,10 +126,14 @@ class HomeScreen extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
         decoration: BoxDecoration(
+          // ✅ Rengi geri koy
+          color: color.withValues(alpha: 0.35),
           borderRadius: BorderRadius.circular(28),
           border: Border.all(color: color, width: 4),
           boxShadow: [
             BoxShadow(
+              // ✅ Gölge rengi ve rengi belirt
+              color: color.withValues(alpha: 0.4),
               offset: const Offset(0, 8),
               blurRadius: 16,
             ),
@@ -156,11 +160,7 @@ class HomeScreen extends StatelessWidget {
                 style: AppTextStyles.title.copyWith(fontSize: 28),
               ),
             ),
-            Icon(
-              Icons.arrow_forward_ios,
-              color: AppColors.darkGreen,
-              size: 28,
-            ),
+            Icon(Icons.arrow_forward_ios, color: AppColors.darkGreen, size: 28),
           ],
         ),
       ),

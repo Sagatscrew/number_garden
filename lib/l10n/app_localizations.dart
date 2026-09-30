@@ -67,8 +67,8 @@ abstract class AppLocalizations {
 
   final String localeName;
 
-  static AppLocalizations? of(BuildContext context) {
-    return Localizations.of<AppLocalizations>(context, AppLocalizations);
+  static AppLocalizations of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations)!;
   }
 
   static const LocalizationsDelegate<AppLocalizations> delegate =
@@ -94,323 +94,407 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('en'),
     Locale('tr'),
+    Locale('en'),
   ];
 
-  /// No description provided for @appName.
+  /// Uygulamanın görünen adı. MaterialApp title'da kullanılır.
   ///
   /// In tr, this message translates to:
   /// **'Sayı Bahçesi'**
   String get appName;
 
-  /// No description provided for @mascotName.
+  /// Maskot tavşanın adı. Tüm ekranlarda tutarlı olmalı.
   ///
   /// In tr, this message translates to:
   /// **'Pamuk'**
   String get mascotName;
 
-  /// No description provided for @welcomeTitle.
+  /// Ana ekranda maskotun konuşma balonundaki karşılama başlığı.
   ///
   /// In tr, this message translates to:
   /// **'Merhaba! Ben Pamuk 🐰'**
   String get welcomeTitle;
 
-  /// No description provided for @welcomeSubtitle.
+  /// Karşılama başlığının altındaki açıklama.
   ///
   /// In tr, this message translates to:
   /// **'Sayıları ve şekilleri birlikte öğrenelim!'**
   String get welcomeSubtitle;
 
-  /// No description provided for @startButton.
+  /// Ana ekrandaki başlangıç butonu.
   ///
   /// In tr, this message translates to:
   /// **'Başla'**
   String get startButton;
 
-  /// No description provided for @backButton.
+  /// Geri gitme butonu (tüm ekranlarda ortak).
   ///
   /// In tr, this message translates to:
   /// **'Geri'**
   String get backButton;
 
-  /// No description provided for @nextButton.
+  /// İleri gitme butonu (sayı/şekil geçişleri).
   ///
   /// In tr, this message translates to:
   /// **'İleri'**
   String get nextButton;
 
-  /// No description provided for @skipButton.
+  /// Atla butonu (isteğe bağlı, tutorial için).
   ///
   /// In tr, this message translates to:
   /// **'Atla'**
   String get skipButton;
 
-  /// No description provided for @againButton.
+  /// Tekrar oyna butonu (sonuç ekranı).
   ///
   /// In tr, this message translates to:
   /// **'Tekrar'**
   String get againButton;
 
-  /// No description provided for @numbersSection.
+  /// Kapatma butonu (diyalog, modal).
+  ///
+  /// In tr, this message translates to:
+  /// **'Kapat'**
+  String get closeButton;
+
+  /// Onaylama butonu.
+  ///
+  /// In tr, this message translates to:
+  /// **'Onayla'**
+  String get confirmButton;
+
+  /// İptal butonu.
+  ///
+  /// In tr, this message translates to:
+  /// **'İptal'**
+  String get cancelButton;
+
+  /// Hata sonrası yeniden deneme butonu.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yeniden Dene'**
+  String get retryButton;
+
+  /// Ana menüdeki Sayılar butonu.
   ///
   /// In tr, this message translates to:
   /// **'Sayılar'**
   String get numbersSection;
 
-  /// No description provided for @shapesSection.
+  /// Ana menüdeki Şekiller butonu.
   ///
   /// In tr, this message translates to:
   /// **'Şekiller'**
   String get shapesSection;
 
-  /// No description provided for @rewardsSection.
+  /// Ana menüdeki Ödüllerim butonu.
   ///
   /// In tr, this message translates to:
   /// **'Ödüllerim'**
   String get rewardsSection;
 
-  /// No description provided for @learnMode.
+  /// Öğrenme modu butonu (quiz yerine).
   ///
   /// In tr, this message translates to:
   /// **'Öğren'**
   String get learnMode;
 
-  /// No description provided for @quizMode.
+  /// Quiz/oyun modu butonu.
   ///
   /// In tr, this message translates to:
   /// **'Oyna'**
   String get quizMode;
 
-  /// No description provided for @numbersTitle.
+  /// Sayı öğrenme ekranının başlığı.
   ///
   /// In tr, this message translates to:
   /// **'Sayıları Öğreniyorum'**
   String get numbersTitle;
 
-  /// No description provided for @shapesTitle.
+  /// Şekil öğrenme ekranının başlığı.
   ///
   /// In tr, this message translates to:
   /// **'Şekilleri Öğreniyorum'**
   String get shapesTitle;
 
-  /// No description provided for @countThis.
+  /// Ekrandaki nesneleri sayması istendiğinde gösterilen talimat.
   ///
   /// In tr, this message translates to:
   /// **'Bunları say!'**
   String get countThis;
 
-  /// No description provided for @howMany.
+  /// Sayma sorusunda çocuğa sorulan soru.
   ///
   /// In tr, this message translates to:
   /// **'Kaç tane var?'**
   String get howMany;
 
-  /// No description provided for @whichShape.
+  /// Şekil tanıma sorusu.
   ///
   /// In tr, this message translates to:
   /// **'Bu hangi şekil?'**
   String get whichShape;
 
-  /// No description provided for @findShape.
+  /// Belirli bir şekli bulma sorusu. Örn: 'Daire nerede?'
   ///
   /// In tr, this message translates to:
   /// **'{shape} nerede?'**
   String findShape(String shape);
 
-  /// No description provided for @correctAnswer.
+  /// Seviye seçim ekranının başlığı.
+  ///
+  /// In tr, this message translates to:
+  /// **'Seviye Seç'**
+  String get selectLevel;
+
+  /// Kolay seviye adı.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kolay'**
+  String get levelEasy;
+
+  /// Orta seviye adı.
+  ///
+  /// In tr, this message translates to:
+  /// **'Orta'**
+  String get levelMedium;
+
+  /// Zor seviye adı.
+  ///
+  /// In tr, this message translates to:
+  /// **'Zor'**
+  String get levelHard;
+
+  /// Doğru cevap sonrası geri bildirim.
   ///
   /// In tr, this message translates to:
   /// **'Harika! Doğru! 🌟'**
   String get correctAnswer;
 
-  /// No description provided for @wrongAnswer.
+  /// Yanlış cevap sonrası geri bildirim.
   ///
   /// In tr, this message translates to:
   /// **'Tekrar dene! 💪'**
   String get wrongAnswer;
 
-  /// No description provided for @tryAgain.
+  /// Yanlış cevap sonrası nazik yönlendirme.
   ///
   /// In tr, this message translates to:
   /// **'Bir daha bakalım'**
   String get tryAgain;
 
-  /// No description provided for @scoreText.
+  /// Skor gösterimi. Örn: '7 / 10'
   ///
   /// In tr, this message translates to:
   /// **'{score} / {total}'**
   String scoreText(int score, int total);
 
-  /// No description provided for @greatJob.
+  /// Yüksek skorda (8+) gösterilen mesaj.
   ///
   /// In tr, this message translates to:
   /// **'Muhteşemsin!'**
   String get greatJob;
 
-  /// No description provided for @goodJob.
+  /// Orta skorda (5-7) gösterilen mesaj.
   ///
   /// In tr, this message translates to:
   /// **'Güzel iş!'**
   String get goodJob;
 
-  /// No description provided for @keepTrying.
+  /// Düşük skorda (<5) cesaretlendirme mesajı.
   ///
   /// In tr, this message translates to:
   /// **'Devam et, başaracaksın!'**
   String get keepTrying;
 
-  /// No description provided for @earnedStars.
+  /// Kısa başarı mesajı.
+  ///
+  /// In tr, this message translates to:
+  /// **'Aferin!'**
+  String get wellDone;
+
+  /// Tam puan (10/10) için özel mesaj.
+  ///
+  /// In tr, this message translates to:
+  /// **'Mükemmel! Hepsini doğru yaptın! 🎉'**
+  String get perfectScore;
+
+  /// Kazanılan yıldız sayısı mesajı.
   ///
   /// In tr, this message translates to:
   /// **'{count} yıldız kazandın!'**
   String earnedStars(int count);
 
-  /// No description provided for @numberOne.
+  /// 1 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'Bir'**
   String get numberOne;
 
-  /// No description provided for @numberTwo.
+  /// 2 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'İki'**
   String get numberTwo;
 
-  /// No description provided for @numberThree.
+  /// 3 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'Üç'**
   String get numberThree;
 
-  /// No description provided for @numberFour.
+  /// 4 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'Dört'**
   String get numberFour;
 
-  /// No description provided for @numberFive.
+  /// 5 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'Beş'**
   String get numberFive;
 
-  /// No description provided for @numberSix.
+  /// 6 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'Altı'**
   String get numberSix;
 
-  /// No description provided for @numberSeven.
+  /// 7 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'Yedi'**
   String get numberSeven;
 
-  /// No description provided for @numberEight.
+  /// 8 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'Sekiz'**
   String get numberEight;
 
-  /// No description provided for @numberNine.
+  /// 9 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'Dokuz'**
   String get numberNine;
 
-  /// No description provided for @numberTen.
+  /// 10 sayısının Türkçe okunuşu.
   ///
   /// In tr, this message translates to:
   /// **'On'**
   String get numberTen;
 
-  /// No description provided for @shapeCircle.
+  /// Daire şeklinin adı.
   ///
   /// In tr, this message translates to:
   /// **'Daire'**
   String get shapeCircle;
 
-  /// No description provided for @shapeSquare.
+  /// Kare şeklinin adı.
   ///
   /// In tr, this message translates to:
   /// **'Kare'**
   String get shapeSquare;
 
-  /// No description provided for @shapeTriangle.
+  /// Üçgen şeklinin adı.
   ///
   /// In tr, this message translates to:
   /// **'Üçgen'**
   String get shapeTriangle;
 
-  /// No description provided for @shapeRectangle.
+  /// Dikdörtgen şeklinin adı.
   ///
   /// In tr, this message translates to:
   /// **'Dikdörtgen'**
   String get shapeRectangle;
 
-  /// No description provided for @shapeStar.
+  /// Yıldız şeklinin adı.
   ///
   /// In tr, this message translates to:
   /// **'Yıldız'**
   String get shapeStar;
 
-  /// No description provided for @shapeHeart.
+  /// Kalp şeklinin adı.
   ///
   /// In tr, this message translates to:
   /// **'Kalp'**
   String get shapeHeart;
 
-  /// No description provided for @parentGateTitle.
+  /// Ebeveyn doğrulama ekranının başlığı.
   ///
   /// In tr, this message translates to:
   /// **'Ebeveyn Kapısı'**
   String get parentGateTitle;
 
-  /// No description provided for @parentGateQuestion.
+  /// Ebeveyn kapısı matematik sorusu. Çocukların geçemeyeceği zorlukta olmalı.
   ///
   /// In tr, this message translates to:
   /// **'Devam etmek için: {num1} + {num2} = ?'**
   String parentGateQuestion(int num1, int num2);
 
-  /// No description provided for @settingsTitle.
+  /// Ayarlar ekranının başlığı.
   ///
   /// In tr, this message translates to:
   /// **'Ayarlar'**
   String get settingsTitle;
 
-  /// No description provided for @soundOn.
+  /// Sesin açık olduğunu belirten etiket.
   ///
   /// In tr, this message translates to:
   /// **'Ses Açık'**
   String get soundOn;
 
-  /// No description provided for @soundOff.
+  /// Sesin kapalı olduğunu belirten etiket.
   ///
   /// In tr, this message translates to:
   /// **'Ses Kapalı'**
   String get soundOff;
 
-  /// No description provided for @musicOn.
+  /// Arka plan müziğinin açık olduğunu belirten etiket.
   ///
   /// In tr, this message translates to:
   /// **'Müzik Açık'**
   String get musicOn;
 
-  /// No description provided for @musicOff.
+  /// Arka plan müziğinin kapalı olduğunu belirten etiket.
   ///
   /// In tr, this message translates to:
   /// **'Müzik Kapalı'**
   String get musicOff;
 
-  /// No description provided for @languageLabel.
+  /// Dil seçimi etiketi.
   ///
   /// In tr, this message translates to:
   /// **'Dil'**
   String get languageLabel;
 
-  /// No description provided for @parentNote.
+  /// Dil seçim ekranının başlığı.
+  ///
+  /// In tr, this message translates to:
+  /// **'Dil Seç'**
+  String get selectLanguage;
+
+  /// Yükleme sırasında gösterilen metin.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yükleniyor...'**
+  String get loadingText;
+
+  /// İnternet yoksa gösterilen hata mesajı.
+  ///
+  /// In tr, this message translates to:
+  /// **'İnternet bağlantısı yok'**
+  String get noInternetConnection;
+
+  /// Genel hata mesajı.
+  ///
+  /// In tr, this message translates to:
+  /// **'Daha sonra tekrar dene'**
+  String get tryAgainLater;
+
+  /// Ana ekranda ebeveynlere gösterilen bilgi notu.
   ///
   /// In tr, this message translates to:
   /// **'Bu uygulama reklamsız ve güvenlidir. Kişisel veri toplamaz.'**

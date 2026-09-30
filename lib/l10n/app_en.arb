@@ -1,0 +1,370 @@
+{
+  "@@locale": "en",
+
+  "appName": "Number Garden",
+  "@appName": {
+    "description": "The visible app name. Used in MaterialApp title."
+  },
+
+  "mascotName": "Cotton",
+  "@mascotName": {
+    "description": "The name of the mascot rabbit. Must be consistent everywhere."
+  },
+
+  "welcomeTitle": "Hi! I'm Cotton 🐰",
+  "@welcomeTitle": {
+    "description": "Mascot's greeting title on the home screen."
+  },
+
+  "welcomeSubtitle": "Let's learn numbers and shapes together!",
+  "@welcomeSubtitle": {
+    "description": "Subtitle under the greeting."
+  },
+
+  "startButton": "Start",
+  "@startButton": {
+    "description": "Start button on home screen."
+  },
+
+  "backButton": "Back",
+  "@backButton": {
+    "description": "Back button (shared across screens)."
+  },
+
+  "nextButton": "Next",
+  "@nextButton": {
+    "description": "Next button (number/shape navigation)."
+  },
+
+  "skipButton": "Skip",
+  "@skipButton": {
+    "description": "Skip button (optional, for tutorial)."
+  },
+
+  "againButton": "Again",
+  "@againButton": {
+    "description": "Play again button (result screen)."
+  },
+
+  "closeButton": "Close",
+  "@closeButton": {
+    "description": "Close button (dialog, modal)."
+  },
+
+  "confirmButton": "Confirm",
+  "@confirmButton": {
+    "description": "Confirm button."
+  },
+
+  "cancelButton": "Cancel",
+  "@cancelButton": {
+    "description": "Cancel button."
+  },
+
+  "retryButton": "Retry",
+  "@retryButton": {
+    "description": "Retry button after an error."
+  },
+
+  "numbersSection": "Numbers",
+  "@numbersSection": {
+    "description": "Numbers button on home menu."
+  },
+
+  "shapesSection": "Shapes",
+  "@shapesSection": {
+    "description": "Shapes button on home menu."
+  },
+
+  "rewardsSection": "My Rewards",
+  "@rewardsSection": {
+    "description": "My Rewards button on home menu."
+  },
+
+  "learnMode": "Learn",
+  "@learnMode": {
+    "description": "Learn mode button."
+  },
+
+  "quizMode": "Play",
+  "@quizMode": {
+    "description": "Quiz/game mode button."
+  },
+
+  "numbersTitle": "Learning Numbers",
+  "@numbersTitle": {
+    "description": "Number learning screen title."
+  },
+
+  "shapesTitle": "Learning Shapes",
+  "@shapesTitle": {
+    "description": "Shape learning screen title."
+  },
+
+  "countThis": "Count these!",
+  "@countThis": {
+    "description": "Instruction shown when child is asked to count objects."
+  },
+
+  "howMany": "How many are there?",
+  "@howMany": {
+    "description": "Counting question asked to the child."
+  },
+
+  "whichShape": "Which shape is this?",
+  "@whichShape": {
+    "description": "Shape recognition question."
+  },
+
+  "findShape": "Where is the {shape}?",
+  "@findShape": {
+    "description": "Find a specific shape. E.g. 'Where is the circle?'",
+    "placeholders": {
+      "shape": {
+        "type": "String",
+        "example": "circle"
+      }
+    }
+  },
+
+  "selectLevel": "Select Level",
+  "@selectLevel": {
+    "description": "Level selection screen title."
+  },
+
+  "levelEasy": "Easy",
+  "@levelEasy": {
+    "description": "Easy level name."
+  },
+
+  "levelMedium": "Medium",
+  "@levelMedium": {
+    "description": "Medium level name."
+  },
+
+  "levelHard": "Hard",
+  "@levelHard": {
+    "description": "Hard level name."
+  },
+
+  "correctAnswer": "Awesome! Correct! 🌟",
+  "@correctAnswer": {
+    "description": "Feedback after correct answer."
+  },
+
+  "wrongAnswer": "Try again! 💪",
+  "@wrongAnswer": {
+    "description": "Feedback after wrong answer."
+  },
+
+  "tryAgain": "Let's look again",
+  "@tryAgain": {
+    "description": "Gentle guidance after wrong answer."
+  },
+
+  "scoreText": "{score} / {total}",
+  "@scoreText": {
+    "description": "Score display. E.g. '7 / 10'",
+    "placeholders": {
+      "score": {
+        "type": "int",
+        "example": "7"
+      },
+      "total": {
+        "type": "int",
+        "example": "10"
+      }
+    }
+  },
+
+  "greatJob": "You're amazing!",
+  "@greatJob": {
+    "description": "Message for high score (8+)."
+  },
+
+  "goodJob": "Good job!",
+  "@goodJob": {
+    "description": "Message for medium score (5-7)."
+  },
+
+  "keepTrying": "Keep going, you'll make it!",
+  "@keepTrying": {
+    "description": "Encouragement for low score (<5)."
+  },
+
+  "wellDone": "Well done!",
+  "@wellDone": {
+    "description": "Short success message."
+  },
+
+  "perfectScore": "Perfect! You got them all! 🎉",
+  "@perfectScore": {
+    "description": "Special message for perfect score (10/10)."
+  },
+
+  "earnedStars": "You earned {count} stars!",
+  "@earnedStars": {
+    "description": "Earned stars count message.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+
+  "numberOne": "One",
+  "@numberOne": {
+    "description": "English reading of number 1."
+  },
+
+  "numberTwo": "Two",
+  "@numberTwo": {
+    "description": "English reading of number 2."
+  },
+
+  "numberThree": "Three",
+  "@numberThree": {
+    "description": "English reading of number 3."
+  },
+
+  "numberFour": "Four",
+  "@numberFour": {
+    "description": "English reading of number 4."
+  },
+
+  "numberFive": "Five",
+  "@numberFive": {
+    "description": "English reading of number 5."
+  },
+
+  "numberSix": "Six",
+  "@numberSix": {
+    "description": "English reading of number 6."
+  },
+
+  "numberSeven": "Seven",
+  "@numberSeven": {
+    "description": "English reading of number 7."
+  },
+
+  "numberEight": "Eight",
+  "@numberEight": {
+    "description": "English reading of number 8."
+  },
+
+  "numberNine": "Nine",
+  "@numberNine": {
+    "description": "English reading of number 9."
+  },
+
+  "numberTen": "Ten",
+  "@numberTen": {
+    "description": "English reading of number 10."
+  },
+
+  "shapeCircle": "Circle",
+  "@shapeCircle": {
+    "description": "Name of the circle shape."
+  },
+
+  "shapeSquare": "Square",
+  "@shapeSquare": {
+    "description": "Name of the square shape."
+  },
+
+  "shapeTriangle": "Triangle",
+  "@shapeTriangle": {
+    "description": "Name of the triangle shape."
+  },
+
+  "shapeRectangle": "Rectangle",
+  "@shapeRectangle": {
+    "description": "Name of the rectangle shape."
+  },
+
+  "shapeStar": "Star",
+  "@shapeStar": {
+    "description": "Name of the star shape."
+  },
+
+  "shapeHeart": "Heart",
+  "@shapeHeart": {
+    "description": "Name of the heart shape."
+  },
+
+  "parentGateTitle": "Parent Gate",
+  "@parentGateTitle": {
+    "description": "Parent verification screen title."
+  },
+
+  "parentGateQuestion": "To continue: {num1} + {num2} = ?",
+  "@parentGateQuestion": {
+    "description": "Parent gate math question. Should be hard enough for children to not pass.",
+    "placeholders": {
+      "num1": {
+        "type": "int",
+        "example": "7"
+      },
+      "num2": {
+        "type": "int",
+        "example": "8"
+      }
+    }
+  },
+
+  "settingsTitle": "Settings",
+  "@settingsTitle": {
+    "description": "Settings screen title."
+  },
+
+  "soundOn": "Sound On",
+  "@soundOn": {
+    "description": "Label indicating sound is on."
+  },
+
+  "soundOff": "Sound Off",
+  "@soundOff": {
+    "description": "Label indicating sound is off."
+  },
+
+  "musicOn": "Music On",
+  "@musicOn": {
+    "description": "Label indicating background music is on."
+  },
+
+  "musicOff": "Music Off",
+  "@musicOff": {
+    "description": "Label indicating background music is off."
+  },
+
+  "languageLabel": "Language",
+  "@languageLabel": {
+    "description": "Language selection label."
+  },
+
+  "selectLanguage": "Select Language",
+  "@selectLanguage": {
+    "description": "Language selection screen title."
+  },
+
+  "loadingText": "Loading...",
+  "@loadingText": {
+    "description": "Text shown while loading."
+  },
+
+  "noInternetConnection": "No internet connection",
+  "@noInternetConnection": {
+    "description": "Error message shown when there is no internet."
+  },
+
+  "tryAgainLater": "Please try again later",
+  "@tryAgainLater": {
+    "description": "Generic error message."
+  },
+
+  "parentNote": "This app is ad-free and safe. It does not collect personal data.",
+  "@parentNote": {
+    "description": "Info note shown to parents on home screen."
+  }
+}

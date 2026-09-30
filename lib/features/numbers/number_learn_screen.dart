@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_text_styles.dart';
 import '../../shared/models/number_item.dart';
@@ -34,7 +35,7 @@ class _NumberLearnScreenState extends State<NumberLearnScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final item = numbersList[_currentIndex];
 
     return Scaffold(
@@ -56,8 +57,11 @@ class _NumberLearnScreenState extends State<NumberLearnScreen> {
                   children: [
                     IconButton(
                       onPressed: () => Navigator.pop(context),
-                      icon: const Icon(Icons.arrow_back_ios,
-                          color: AppColors.darkGreen, size: 30),
+                      icon: const Icon(
+                        Icons.arrow_back_ios,
+                        color: AppColors.darkGreen,
+                        size: 30,
+                      ),
                     ),
                     Expanded(
                       child: Text(
@@ -77,68 +81,78 @@ class _NumberLearnScreenState extends State<NumberLearnScreen> {
               Expanded(
                 child: GestureDetector(
                   onTap: _next,
-                  child: Container(
-                    key: ValueKey(_currentIndex),
-                    margin: const EdgeInsets.symmetric(horizontal: 32),
-                    padding: const EdgeInsets.all(24),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(32),
-                      border: Border.all(
-                          color: AppColors.primaryGreen, width: 4),
-                      boxShadow: [
-                        BoxShadow(
-                          color: AppColors.primaryGreen.withValues(alpha: 0.3),
-                          offset: const Offset(0, 8),
-                          blurRadius: 20,
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        // Büyük sayı
-                        Text(
-                          '${item.value}',
-                          style: AppTextStyles.number.copyWith(fontSize: 120),
-                        ),
-
-                        const SizedBox(height: 8),
-
-                        // Sayı adı
-                        Text(
-                          _getNumberName(context, item),
-                          style: AppTextStyles.heading,
-                        ),
-
-                        const SizedBox(height: 24),
-
-                        // Emoji sayısı
-                        Expanded(
-                          child: Center(
-                            child: Wrap(
-                              alignment: WrapAlignment.center,
-                              spacing: 8,
-                              runSpacing: 8,
-                              children: List.generate(
-                                item.value,
-                                (i) => Text(
-                                  item.emoji,
-                                  style: const TextStyle(fontSize: 42),
-                                )
-                                    .animate(delay: (i * 100).ms)
-                                    .fadeIn()
-                                    .scaleXY(begin: 0.3, end: 1),
+                  child:
+                      Container(
+                            key: ValueKey(_currentIndex),
+                            margin: const EdgeInsets.symmetric(horizontal: 32),
+                            padding: const EdgeInsets.all(24),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(32),
+                              border: Border.all(
+                                color: AppColors.primaryGreen,
+                                width: 4,
                               ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: AppColors.primaryGreen.withValues(
+                                    alpha: 0.3,
+                                  ),
+                                  offset: const Offset(0, 8),
+                                  blurRadius: 20,
+                                ),
+                              ],
                             ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                      .animate()
-                      .fadeIn(duration: 400.ms)
-                      .scaleXY(begin: 0.9, end: 1),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                // Büyük sayı
+                                Text(
+                                  '${item.value}',
+                                  style: AppTextStyles.number.copyWith(
+                                    fontSize: 120,
+                                  ),
+                                ),
+
+                                const SizedBox(height: 8),
+
+                                // Sayı adı
+                                Text(
+                                  _getNumberName(context, item),
+                                  style: AppTextStyles.heading,
+                                ),
+
+                                const SizedBox(height: 24),
+
+                                // Emoji sayısı
+                                Expanded(
+                                  child: Center(
+                                    child: Wrap(
+                                      alignment: WrapAlignment.center,
+                                      spacing: 8,
+                                      runSpacing: 8,
+                                      children: List.generate(
+                                        item.value,
+                                        (i) =>
+                                            Text(
+                                                  item.emoji,
+                                                  style: const TextStyle(
+                                                    fontSize: 42,
+                                                  ),
+                                                )
+                                                .animate(delay: (i * 100).ms)
+                                                .fadeIn()
+                                                .scaleXY(begin: 0.3, end: 1),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                          .animate()
+                          .fadeIn(duration: 400.ms)
+                          .scaleXY(begin: 0.9, end: 1),
                 ),
               ),
 
@@ -222,22 +236,14 @@ class _NumberLearnScreenState extends State<NumberLearnScreen> {
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(24),
-          boxShadow: [
-            BoxShadow(
-              offset: const Offset(0, 4),
-              blurRadius: 12,
-            ),
-          ],
+          boxShadow: [BoxShadow(offset: const Offset(0, 4), blurRadius: 12)],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(emoji, style: const TextStyle(fontSize: 24)),
             const SizedBox(width: 8),
-            Text(
-              label,
-              style: AppTextStyles.button,
-            ),
+            Text(label, style: AppTextStyles.button),
           ],
         ),
       ),

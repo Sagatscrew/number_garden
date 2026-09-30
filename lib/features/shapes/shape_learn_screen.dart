@@ -1,5 +1,8 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_text_styles.dart';
 import '../../shared/models/shape_item.dart';
@@ -75,11 +78,7 @@ class _ShapeLearnScreenState extends State<ShapeLearnScreen> {
           painter: _StarPainter(item.color),
         );
       case 'Kalp':
-        return Icon(
-          Icons.favorite,
-          size: 180,
-          color: item.color,
-        );
+        return Icon(Icons.favorite, size: 180, color: item.color);
       default:
         return const SizedBox();
     }
@@ -87,7 +86,7 @@ class _ShapeLearnScreenState extends State<ShapeLearnScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
+    final l10n = AppLocalizations.of(context);
     final item = shapesList[_currentIndex];
 
     return Scaffold(
@@ -108,8 +107,11 @@ class _ShapeLearnScreenState extends State<ShapeLearnScreen> {
                   children: [
                     IconButton(
                       onPressed: () => Navigator.pop(context),
-                      icon: const Icon(Icons.arrow_back_ios,
-                          color: AppColors.darkGreen, size: 30),
+                      icon: const Icon(
+                        Icons.arrow_back_ios,
+                        color: AppColors.darkGreen,
+                        size: 30,
+                      ),
                     ),
                     Expanded(
                       child: Text(
@@ -133,8 +135,7 @@ class _ShapeLearnScreenState extends State<ShapeLearnScreen> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(32),
-                    border:
-                        Border.all(color: AppColors.primaryGreen, width: 4),
+                    border: Border.all(color: AppColors.primaryGreen, width: 4),
                     boxShadow: [
                       BoxShadow(
                         color: AppColors.primaryGreen.withValues(alpha: 0.3),
@@ -149,7 +150,11 @@ class _ShapeLearnScreenState extends State<ShapeLearnScreen> {
                       _buildShape(item)
                           .animate()
                           .fadeIn(duration: 400.ms)
-                          .scaleXY(begin: 0.5, end: 1, curve: Curves.elasticOut),
+                          .scaleXY(
+                            begin: 0.5,
+                            end: 1,
+                            curve: Curves.elasticOut,
+                          ),
 
                       const SizedBox(height: 32),
 
@@ -260,12 +265,7 @@ class _ShapeLearnScreenState extends State<ShapeLearnScreen> {
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.circular(24),
-          boxShadow: [
-            BoxShadow(
-              offset: const Offset(0, 4),
-              blurRadius: 12,
-            ),
-          ],
+          boxShadow: [BoxShadow(offset: const Offset(0, 4), blurRadius: 12)],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -330,18 +330,22 @@ class _StarPainter extends CustomPainter {
   }
 
   Path _createStarPath(
-      double width, double height, int points, double innerRadius) {
+    double width,
+    double height,
+    int points,
+    double innerRatio, // ✅ Artık doğru isim
+  ) {
     final path = Path();
     final centerX = width / 2;
     final centerY = height / 2;
     final outerRadius = width / 2;
-    final innerR = outerRadius * innerRadius;
+    final innerRadius = outerRadius * innerRatio; // ✅ Doğru formül
 
     for (int i = 0; i < points * 2; i++) {
-      final radius = i.isEven ? outerRadius : innerR;
-      final angle = (i * 3.14159 / points) - 3.14159 / 2;
-      final x = centerX + radius * _cos(angle);
-      final y = centerY + radius * _sin(angle);
+      final radius = i.isEven ? outerRadius : innerRadius;
+      final angle = (i * math.pi / points) - math.pi / 2;
+      final x = centerX + radius * math.cos(angle);
+      final y = centerY + radius * math.sin(angle);
 
       if (i == 0) {
         path.moveTo(x, y);
@@ -351,38 +355,6 @@ class _StarPainter extends CustomPainter {
     }
     path.close();
     return path;
-  }
-
-  double _cos(double angle) => (angle).abs() % (2 * 3.14159) == 3.14159 / 2
-      ? 0
-      : _cosine(angle);
-  double _sin(double angle) => _sine(angle);
-
-  double _cosine(double x) {
-    // Basit yaklaşım
-    return _taylorCos(x);
-  }
-
-  double _sine(double x) => _taylorSin(x);
-
-  double _taylorCos(double x) {
-    double result = 1;
-    double term = 1;
-    for (int i = 1; i < 10; i++) {
-      term *= -x * x / ((2 * i - 1) * (2 * i));
-      result += term;
-    }
-    return result;
-  }
-
-  double _taylorSin(double x) {
-    double result = x;
-    double term = x;
-    for (int i = 1; i < 10; i++) {
-      term *= -x * x / ((2 * i) * (2 * i + 1));
-      result += term;
-    }
-    return result;
   }
 
   @override

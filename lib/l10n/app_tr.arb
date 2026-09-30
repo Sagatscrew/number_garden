@@ -1,0 +1,370 @@
+{
+  "@@locale": "tr",
+
+  "appName": "Sayı Bahçesi",
+  "@appName": {
+    "description": "Uygulamanın görünen adı. MaterialApp title'da kullanılır."
+  },
+
+  "mascotName": "Pamuk",
+  "@mascotName": {
+    "description": "Maskot tavşanın adı. Tüm ekranlarda tutarlı olmalı."
+  },
+
+  "welcomeTitle": "Merhaba! Ben Pamuk 🐰",
+  "@welcomeTitle": {
+    "description": "Ana ekranda maskotun konuşma balonundaki karşılama başlığı."
+  },
+
+  "welcomeSubtitle": "Sayıları ve şekilleri birlikte öğrenelim!",
+  "@welcomeSubtitle": {
+    "description": "Karşılama başlığının altındaki açıklama."
+  },
+
+  "startButton": "Başla",
+  "@startButton": {
+    "description": "Ana ekrandaki başlangıç butonu."
+  },
+
+  "backButton": "Geri",
+  "@backButton": {
+    "description": "Geri gitme butonu (tüm ekranlarda ortak)."
+  },
+
+  "nextButton": "İleri",
+  "@nextButton": {
+    "description": "İleri gitme butonu (sayı/şekil geçişleri)."
+  },
+
+  "skipButton": "Atla",
+  "@skipButton": {
+    "description": "Atla butonu (isteğe bağlı, tutorial için)."
+  },
+
+  "againButton": "Tekrar",
+  "@againButton": {
+    "description": "Tekrar oyna butonu (sonuç ekranı)."
+  },
+
+  "closeButton": "Kapat",
+  "@closeButton": {
+    "description": "Kapatma butonu (diyalog, modal)."
+  },
+
+  "confirmButton": "Onayla",
+  "@confirmButton": {
+    "description": "Onaylama butonu."
+  },
+
+  "cancelButton": "İptal",
+  "@cancelButton": {
+    "description": "İptal butonu."
+  },
+
+  "retryButton": "Yeniden Dene",
+  "@retryButton": {
+    "description": "Hata sonrası yeniden deneme butonu."
+  },
+
+  "numbersSection": "Sayılar",
+  "@numbersSection": {
+    "description": "Ana menüdeki Sayılar butonu."
+  },
+
+  "shapesSection": "Şekiller",
+  "@shapesSection": {
+    "description": "Ana menüdeki Şekiller butonu."
+  },
+
+  "rewardsSection": "Ödüllerim",
+  "@rewardsSection": {
+    "description": "Ana menüdeki Ödüllerim butonu."
+  },
+
+  "learnMode": "Öğren",
+  "@learnMode": {
+    "description": "Öğrenme modu butonu (quiz yerine)."
+  },
+
+  "quizMode": "Oyna",
+  "@quizMode": {
+    "description": "Quiz/oyun modu butonu."
+  },
+
+  "numbersTitle": "Sayıları Öğreniyorum",
+  "@numbersTitle": {
+    "description": "Sayı öğrenme ekranının başlığı."
+  },
+
+  "shapesTitle": "Şekilleri Öğreniyorum",
+  "@shapesTitle": {
+    "description": "Şekil öğrenme ekranının başlığı."
+  },
+
+  "countThis": "Bunları say!",
+  "@countThis": {
+    "description": "Ekrandaki nesneleri sayması istendiğinde gösterilen talimat."
+  },
+
+  "howMany": "Kaç tane var?",
+  "@howMany": {
+    "description": "Sayma sorusunda çocuğa sorulan soru."
+  },
+
+  "whichShape": "Bu hangi şekil?",
+  "@whichShape": {
+    "description": "Şekil tanıma sorusu."
+  },
+
+  "findShape": "{shape} nerede?",
+  "@findShape": {
+    "description": "Belirli bir şekli bulma sorusu. Örn: 'Daire nerede?'",
+    "placeholders": {
+      "shape": {
+        "type": "String",
+        "example": "Daire"
+      }
+    }
+  },
+
+  "selectLevel": "Seviye Seç",
+  "@selectLevel": {
+    "description": "Seviye seçim ekranının başlığı."
+  },
+
+  "levelEasy": "Kolay",
+  "@levelEasy": {
+    "description": "Kolay seviye adı."
+  },
+
+  "levelMedium": "Orta",
+  "@levelMedium": {
+    "description": "Orta seviye adı."
+  },
+
+  "levelHard": "Zor",
+  "@levelHard": {
+    "description": "Zor seviye adı."
+  },
+
+  "correctAnswer": "Harika! Doğru! 🌟",
+  "@correctAnswer": {
+    "description": "Doğru cevap sonrası geri bildirim."
+  },
+
+  "wrongAnswer": "Tekrar dene! 💪",
+  "@wrongAnswer": {
+    "description": "Yanlış cevap sonrası geri bildirim."
+  },
+
+  "tryAgain": "Bir daha bakalım",
+  "@tryAgain": {
+    "description": "Yanlış cevap sonrası nazik yönlendirme."
+  },
+
+  "scoreText": "{score} / {total}",
+  "@scoreText": {
+    "description": "Skor gösterimi. Örn: '7 / 10'",
+    "placeholders": {
+      "score": {
+        "type": "int",
+        "example": "7"
+      },
+      "total": {
+        "type": "int",
+        "example": "10"
+      }
+    }
+  },
+
+  "greatJob": "Muhteşemsin!",
+  "@greatJob": {
+    "description": "Yüksek skorda (8+) gösterilen mesaj."
+  },
+
+  "goodJob": "Güzel iş!",
+  "@goodJob": {
+    "description": "Orta skorda (5-7) gösterilen mesaj."
+  },
+
+  "keepTrying": "Devam et, başaracaksın!",
+  "@keepTrying": {
+    "description": "Düşük skorda (<5) cesaretlendirme mesajı."
+  },
+
+  "wellDone": "Aferin!",
+  "@wellDone": {
+    "description": "Kısa başarı mesajı."
+  },
+
+  "perfectScore": "Mükemmel! Hepsini doğru yaptın! 🎉",
+  "@perfectScore": {
+    "description": "Tam puan (10/10) için özel mesaj."
+  },
+
+  "earnedStars": "{count} yıldız kazandın!",
+  "@earnedStars": {
+    "description": "Kazanılan yıldız sayısı mesajı.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "5"
+      }
+    }
+  },
+
+  "numberOne": "Bir",
+  "@numberOne": {
+    "description": "1 sayısının Türkçe okunuşu."
+  },
+
+  "numberTwo": "İki",
+  "@numberTwo": {
+    "description": "2 sayısının Türkçe okunuşu."
+  },
+
+  "numberThree": "Üç",
+  "@numberThree": {
+    "description": "3 sayısının Türkçe okunuşu."
+  },
+
+  "numberFour": "Dört",
+  "@numberFour": {
+    "description": "4 sayısının Türkçe okunuşu."
+  },
+
+  "numberFive": "Beş",
+  "@numberFive": {
+    "description": "5 sayısının Türkçe okunuşu."
+  },
+
+  "numberSix": "Altı",
+  "@numberSix": {
+    "description": "6 sayısının Türkçe okunuşu."
+  },
+
+  "numberSeven": "Yedi",
+  "@numberSeven": {
+    "description": "7 sayısının Türkçe okunuşu."
+  },
+
+  "numberEight": "Sekiz",
+  "@numberEight": {
+    "description": "8 sayısının Türkçe okunuşu."
+  },
+
+  "numberNine": "Dokuz",
+  "@numberNine": {
+    "description": "9 sayısının Türkçe okunuşu."
+  },
+
+  "numberTen": "On",
+  "@numberTen": {
+    "description": "10 sayısının Türkçe okunuşu."
+  },
+
+  "shapeCircle": "Daire",
+  "@shapeCircle": {
+    "description": "Daire şeklinin adı."
+  },
+
+  "shapeSquare": "Kare",
+  "@shapeSquare": {
+    "description": "Kare şeklinin adı."
+  },
+
+  "shapeTriangle": "Üçgen",
+  "@shapeTriangle": {
+    "description": "Üçgen şeklinin adı."
+  },
+
+  "shapeRectangle": "Dikdörtgen",
+  "@shapeRectangle": {
+    "description": "Dikdörtgen şeklinin adı."
+  },
+
+  "shapeStar": "Yıldız",
+  "@shapeStar": {
+    "description": "Yıldız şeklinin adı."
+  },
+
+  "shapeHeart": "Kalp",
+  "@shapeHeart": {
+    "description": "Kalp şeklinin adı."
+  },
+
+  "parentGateTitle": "Ebeveyn Kapısı",
+  "@parentGateTitle": {
+    "description": "Ebeveyn doğrulama ekranının başlığı."
+  },
+
+  "parentGateQuestion": "Devam etmek için: {num1} + {num2} = ?",
+  "@parentGateQuestion": {
+    "description": "Ebeveyn kapısı matematik sorusu. Çocukların geçemeyeceği zorlukta olmalı.",
+    "placeholders": {
+      "num1": {
+        "type": "int",
+        "example": "7"
+      },
+      "num2": {
+        "type": "int",
+        "example": "8"
+      }
+    }
+  },
+
+  "settingsTitle": "Ayarlar",
+  "@settingsTitle": {
+    "description": "Ayarlar ekranının başlığı."
+  },
+
+  "soundOn": "Ses Açık",
+  "@soundOn": {
+    "description": "Sesin açık olduğunu belirten etiket."
+  },
+
+  "soundOff": "Ses Kapalı",
+  "@soundOff": {
+    "description": "Sesin kapalı olduğunu belirten etiket."
+  },
+
+  "musicOn": "Müzik Açık",
+  "@musicOn": {
+    "description": "Arka plan müziğinin açık olduğunu belirten etiket."
+  },
+
+  "musicOff": "Müzik Kapalı",
+  "@musicOff": {
+    "description": "Arka plan müziğinin kapalı olduğunu belirten etiket."
+  },
+
+  "languageLabel": "Dil",
+  "@languageLabel": {
+    "description": "Dil seçimi etiketi."
+  },
+
+  "selectLanguage": "Dil Seç",
+  "@selectLanguage": {
+    "description": "Dil seçim ekranının başlığı."
+  },
+
+  "loadingText": "Yükleniyor...",
+  "@loadingText": {
+    "description": "Yükleme sırasında gösterilen metin."
+  },
+
+  "noInternetConnection": "İnternet bağlantısı yok",
+  "@noInternetConnection": {
+    "description": "İnternet yoksa gösterilen hata mesajı."
+  },
+
+  "tryAgainLater": "Daha sonra tekrar dene",
+  "@tryAgainLater": {
+    "description": "Genel hata mesajı."
+  },
+
+  "parentNote": "Bu uygulama reklamsız ve güvenlidir. Kişisel veri toplamaz.",
+  "@parentNote": {
+    "description": "Ana ekranda ebeveynlere gösterilen bilgi notu."
+  }
+}

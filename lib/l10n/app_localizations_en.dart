@@ -37,6 +37,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get againButton => 'Again';
 
   @override
+  String get closeButton => 'Close';
+
+  @override
+  String get confirmButton => 'Confirm';
+
+  @override
+  String get cancelButton => 'Cancel';
+
+  @override
+  String get retryButton => 'Retry';
+
+  @override
   String get numbersSection => 'Numbers';
 
   @override
@@ -72,6 +84,18 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
+  String get selectLevel => 'Select Level';
+
+  @override
+  String get levelEasy => 'Easy';
+
+  @override
+  String get levelMedium => 'Medium';
+
+  @override
+  String get levelHard => 'Hard';
+
+  @override
   String get correctAnswer => 'Awesome! Correct! 🌟';
 
   @override
@@ -93,6 +117,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get keepTrying => 'Keep going, you\'ll make it!';
+
+  @override
+  String get wellDone => 'Well done!';
+
+  @override
+  String get perfectScore => 'Perfect! You got them all! 🎉';
 
   @override
   String earnedStars(int count) {
@@ -172,6 +202,18 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get languageLabel => 'Language';
+
+  @override
+  String get selectLanguage => 'Select Language';
+
+  @override
+  String get loadingText => 'Loading...';
+
+  @override
+  String get noInternetConnection => 'No internet connection';
+
+  @override
+  String get tryAgainLater => 'Please try again later';
 
   @override
   String get parentNote =>

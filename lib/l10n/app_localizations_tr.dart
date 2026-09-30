@@ -37,6 +37,18 @@ class AppLocalizationsTr extends AppLocalizations {
   String get againButton => 'Tekrar';
 
   @override
+  String get closeButton => 'Kapat';
+
+  @override
+  String get confirmButton => 'Onayla';
+
+  @override
+  String get cancelButton => 'İptal';
+
+  @override
+  String get retryButton => 'Yeniden Dene';
+
+  @override
   String get numbersSection => 'Sayılar';
 
   @override
@@ -72,6 +84,18 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
+  String get selectLevel => 'Seviye Seç';
+
+  @override
+  String get levelEasy => 'Kolay';
+
+  @override
+  String get levelMedium => 'Orta';
+
+  @override
+  String get levelHard => 'Zor';
+
+  @override
   String get correctAnswer => 'Harika! Doğru! 🌟';
 
   @override
@@ -93,6 +117,12 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get keepTrying => 'Devam et, başaracaksın!';
+
+  @override
+  String get wellDone => 'Aferin!';
+
+  @override
+  String get perfectScore => 'Mükemmel! Hepsini doğru yaptın! 🎉';
 
   @override
   String earnedStars(int count) {
@@ -172,6 +202,18 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get languageLabel => 'Dil';
+
+  @override
+  String get selectLanguage => 'Dil Seç';
+
+  @override
+  String get loadingText => 'Yükleniyor...';
+
+  @override
+  String get noInternetConnection => 'İnternet bağlantısı yok';
+
+  @override
+  String get tryAgainLater => 'Daha sonra tekrar dene';
 
   @override
   String get parentNote =>
