@@ -1,0 +1,94 @@
+{
+  "@@locale": "tr",
+  
+  "appName": "Sayı Bahçesi",
+  "mascotName": "Pamuk",
+  
+  "welcomeTitle": "Merhaba! Ben Pamuk 🐰",
+  "welcomeSubtitle": "Sayıları ve şekilleri birlikte öğrenelim!",
+  
+  "startButton": "Başla",
+  "backButton": "Geri",
+  "nextButton": "İleri",
+  "skipButton": "Atla",
+  "againButton": "Tekrar",
+  
+  "numbersSection": "Sayılar",
+  "shapesSection": "Şekiller",
+  "rewardsSection": "Ödüllerim",
+  
+  "learnMode": "Öğren",
+  "quizMode": "Oyna",
+  
+  "numbersTitle": "Sayıları Öğreniyorum",
+  "shapesTitle": "Şekilleri Öğreniyorum",
+  
+  "countThis": "Bunları say!",
+  "howMany": "Kaç tane var?",
+  "whichShape": "Bu hangi şekil?",
+  "findShape": "{shape} nerede?",
+  "@findShape": {
+    "placeholders": {
+      "shape": {"type": "String"}
+    }
+  },
+  
+  "correctAnswer": "Harika! Doğru! 🌟",
+  "wrongAnswer": "Tekrar dene! 💪",
+  "tryAgain": "Bir daha bakalım",
+  
+  "scoreText": "{score} / {total}",
+  "@scoreText": {
+    "placeholders": {
+      "score": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  },
+  
+  "greatJob": "Muhteşemsin!",
+  "goodJob": "Güzel iş!",
+  "keepTrying": "Devam et, başaracaksın!",
+  
+  "earnedStars": "{count} yıldız kazandın!",
+  "@earnedStars": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  
+  "numberOne": "Bir",
+  "numberTwo": "İki",
+  "numberThree": "Üç",
+  "numberFour": "Dört",
+  "numberFive": "Beş",
+  "numberSix": "Altı",
+  "numberSeven": "Yedi",
+  "numberEight": "Sekiz",
+  "numberNine": "Dokuz",
+  "numberTen": "On",
+  
+  "shapeCircle": "Daire",
+  "shapeSquare": "Kare",
+  "shapeTriangle": "Üçgen",
+  "shapeRectangle": "Dikdörtgen",
+  "shapeStar": "Yıldız",
+  "shapeHeart": "Kalp",
+  
+  "parentGateTitle": "Ebeveyn Kapısı",
+  "parentGateQuestion": "Devam etmek için: {num1} + {num2} = ?",
+  "@parentGateQuestion": {
+    "placeholders": {
+      "num1": {"type": "int"},
+      "num2": {"type": "int"}
+    }
+  },
+  
+  "settingsTitle": "Ayarlar",
+  "soundOn": "Ses Açık",
+  "soundOff": "Ses Kapalı",
+  "musicOn": "Müzik Açık",
+  "musicOff": "Müzik Kapalı",
+  "languageLabel": "Dil",
+  
+  "parentNote": "Bu uygulama reklamsız ve güvenlidir. Kişisel veri toplamaz."
+}
