@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:number_garden/core/theme/app_colors.dart';
 import 'package:number_garden/core/theme/app_text_styles.dart';
+import 'package:number_garden/features/numbers/number_quiz_screen.dart';
+import 'package:number_garden/features/shapes/shape_quiz_screen.dart';
 import 'package:number_garden/shared/widgets/mascot_widget.dart';
 import 'package:number_garden/l10n/app_localizations.dart';
 import 'package:number_garden/features/numbers/number_learn_screen.dart';
@@ -60,35 +62,49 @@ class HomeScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 16),
                     child: Column(
                       children: [
-                        _buildMenuCard(
+                        _buildSectionCard(
                           context,
                           emoji: '🔢',
                           title: l10n.numbersSection,
                           color: AppColors.accentYellow,
-                          onTap: () => Navigator.push(
+                          onLearn: () => Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (_) => const NumberLearnScreen(),
                             ),
                           ),
-                        ).animate().fadeIn(delay: 600.ms).slideX(begin: -0.3),
+                          onQuiz: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const NumberQuizScreen(),
+                            ),
+                          ),
+                          learnLabel: l10n.learnMode,
+                          quizLabel: l10n.quizMode,
+                        ),
 
                         const SizedBox(height: 20),
 
-                        _buildMenuCard(
+                        _buildSectionCard(
                           context,
                           emoji: '🔷',
                           title: l10n.shapesSection,
                           color: AppColors.accentPink,
-                          onTap: () => Navigator.push(
+                          onLearn: () => Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder: (_) => const ShapeLearnScreen(),
                             ),
                           ),
-                        ).animate().fadeIn(delay: 800.ms).slideX(begin: 0.3),
-
-                        const SizedBox(height: 24),
+                          onQuiz: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => const ShapeQuizScreen(),
+                            ),
+                          ),
+                          learnLabel: l10n.learnMode,
+                          quizLabel: l10n.quizMode,
+                        ),
 
                         // Alt bilgi
                         Padding(
@@ -114,53 +130,104 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildMenuCard(
+  Widget _buildSectionCard(
     BuildContext context, {
     required String emoji,
     required String title,
+    required Color color,
+    required VoidCallback onLearn,
+    required VoidCallback onQuiz,
+    required String learnLabel,
+    required String quizLabel,
+  }) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.35),
+        borderRadius: BorderRadius.circular(28),
+        border: Border.all(color: color, width: 4),
+        boxShadow: [
+          BoxShadow(
+            color: color.withValues(alpha: 0.4),
+            offset: const Offset(0, 8),
+            blurRadius: 16,
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          // Başlık
+          Row(
+            children: [
+              Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
+                  border: Border.all(color: color, width: 3),
+                ),
+                child: Center(
+                  child: Text(emoji, style: const TextStyle(fontSize: 32)),
+                ),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Text(
+                  title,
+                  style: AppTextStyles.title.copyWith(fontSize: 26),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          // İki buton
+          Row(
+            children: [
+              Expanded(
+                child: _buildActionButton(
+                  emoji: '📖',
+                  label: learnLabel,
+                  color: AppColors.primaryGreen,
+                  onTap: onLearn,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildActionButton(
+                  emoji: '🎯',
+                  label: quizLabel,
+                  color: AppColors.accentOrange,
+                  onTap: onQuiz,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildActionButton({
+    required String emoji,
+    required String label,
     required Color color,
     required VoidCallback onTap,
   }) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 20),
+        padding: const EdgeInsets.symmetric(vertical: 14),
         decoration: BoxDecoration(
-          // ✅ Rengi geri koy
-          color: color.withValues(alpha: 0.35),
-          borderRadius: BorderRadius.circular(28),
-          border: Border.all(color: color, width: 4),
-          boxShadow: [
-            BoxShadow(
-              // ✅ Gölge rengi ve rengi belirt
-              color: color.withValues(alpha: 0.4),
-              offset: const Offset(0, 8),
-              blurRadius: 16,
-            ),
-          ],
+          color: color,
+          borderRadius: BorderRadius.circular(20),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              width: 70,
-              height: 70,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
-                border: Border.all(color: color, width: 3),
-              ),
-              child: Center(
-                child: Text(emoji, style: const TextStyle(fontSize: 38)),
-              ),
-            ),
-            const SizedBox(width: 20),
-            Expanded(
-              child: Text(
-                title,
-                style: AppTextStyles.title.copyWith(fontSize: 28),
-              ),
-            ),
-            Icon(Icons.arrow_forward_ios, color: AppColors.darkGreen, size: 28),
+            Text(emoji, style: const TextStyle(fontSize: 20)),
+            const SizedBox(width: 6),
+            Text(label, style: AppTextStyles.button.copyWith(fontSize: 18)),
           ],
         ),
       ),
