@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:number_garden/core/audio/audio_manager.dart';
 import 'package:number_garden/core/theme/app_colors.dart';
 import 'package:number_garden/core/theme/app_text_styles.dart';
 import 'package:number_garden/features/numbers/number_quiz_screen.dart';
@@ -9,8 +10,26 @@ import 'package:number_garden/l10n/app_localizations.dart';
 import 'package:number_garden/features/numbers/number_learn_screen.dart';
 import 'package:number_garden/features/shapes/shape_learn_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Arka plan müziğini başlat
+    AudioManager.instance.startBgm();
+  }
+
+  @override
+  void dispose() {
+    // Ana ekrandan çıkınca müziği durdur
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -108,7 +127,7 @@ class HomeScreen extends StatelessWidget {
 
                         // Alt bilgi
                         Padding(
-                          padding: const EdgeInsets.only(bottom: 16),
+                          padding: const EdgeInsets.only(top: 12),
                           child: Text(
                             l10n.parentNote,
                             style: AppTextStyles.body.copyWith(

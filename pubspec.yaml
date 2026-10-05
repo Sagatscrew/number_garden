@@ -77,6 +77,8 @@ flutter:
     - assets/images/mascot/
     - assets/images/shapes/
     - assets/images/numbers/
+    - assets/audio/sfx/
+    - assets/audio/bgm/
     - assets/audio/tr/
     - assets/audio/en/
     - assets/animations/

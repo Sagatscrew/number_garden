@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:number_garden/core/audio/audio_manager.dart';
 
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_text_styles.dart';
@@ -17,12 +18,14 @@ class _NumberLearnScreenState extends State<NumberLearnScreen> {
   int _currentIndex = 0;
 
   void _next() {
+    AudioManager.instance.playTap(); // 🎵 Tık sesi
     if (_currentIndex < numbersList.length - 1) {
       setState(() => _currentIndex++);
     }
   }
 
   void _previous() {
+    AudioManager.instance.playTap(); // 🎵 Tık sesi
     if (_currentIndex > 0) {
       setState(() => _currentIndex--);
     }

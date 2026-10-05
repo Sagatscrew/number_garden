@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:confetti/confetti.dart';
+import 'package:number_garden/core/audio/audio_manager.dart';
 
 import '../../core/theme/app_colors.dart';
 import '../../core/theme/app_text_styles.dart';
@@ -46,13 +47,20 @@ class _ShapeQuizScreenState extends State<ShapeQuizScreen> {
   void _onAnswerSelected(int index) {
     if (_answered) return;
 
+    final isCorrect = index == _questions[_currentIndex].correctIndex;
+
+    // 🎵 Ses çal
+    if (isCorrect) {
+      AudioManager.instance.playCorrect();
+      _confettiController.play();
+    } else {
+      AudioManager.instance.playWrong();
+    }
+
     setState(() {
       _selectedIndex = index;
       _answered = true;
-      if (index == _questions[_currentIndex].correctIndex) {
-        _score++;
-        _confettiController.play();
-      }
+      if (isCorrect) _score++;
     });
 
     Future.delayed(const Duration(milliseconds: 1500), () {
@@ -74,6 +82,11 @@ class _ShapeQuizScreenState extends State<ShapeQuizScreen> {
   }
 
   Future<void> _finishQuiz() async {
+    // 🎵 Kutlama sesi
+    if (_score >= _questions.length * 0.5) {
+      AudioManager.instance.playCelebration();
+    }
+
     final result = await Navigator.push(
       context,
       MaterialPageRoute(
@@ -88,7 +101,7 @@ class _ShapeQuizScreenState extends State<ShapeQuizScreen> {
 
     if (result == 'playAgain') {
       setState(() {
-        _questions = _generator.generateShapeQuiz();
+        _questions = _generator.generateNumberQuiz();
         _currentIndex = 0;
         _score = 0;
         _selectedIndex = null;

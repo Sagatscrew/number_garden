@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'core/audio/audio_manager.dart';
 import 'core/theme/app_theme.dart';
 import 'features/home/home_screen.dart';
 import 'l10n/app_localizations.dart';
 
-void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  // Ses yöneticisini başlat (gerekirse)
   runApp(const NumberGardenApp());
 }
 
